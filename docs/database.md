@@ -1,0 +1,2 @@
+# Database
+Run `sql/schema.sql` on a new Supabase PostgreSQL database. Tables: `admins`, `orders`, `licenses`, `license_activations`, `support_tickets`, `webhook_events`. RLS is enabled with no browser access policies. Service role access is restricted to Netlify Functions. Test with an unprivileged token to ensure data cannot be read directly. Production migrations, backups, deletion/export workflows and audit logs are still needed.

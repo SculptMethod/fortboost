@@ -1,0 +1,2 @@
+# Licensing
+A paid order yields one license with one allowed device by default. `POST /api/license` with bearer token and `licenseId` checks ownership and status. `POST /api/activate` with bearer token, `licenseId`, and `deviceId` hashes device identifier server-side with HMAC and enforces a device limit transactionally. This is a preliminary API contract, not a secure finished desktop licensing protocol: device identifiers are spoofable, offline operation is not defined, revocation caching and rate limits are incomplete. Do not ship until threat modeled and tested.

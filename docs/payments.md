@@ -1,0 +1,2 @@
+# Stripe test payments
+Only test mode is allowed by checkout code (`sk_test_` and `ENABLE_TEST_CHECKOUT=true`). A logged-in user starts Checkout. Webhook validates Stripe signature and fulfills only `checkout.session.completed` with `payment_status=paid`. The database RPC deduplicates events. Full refunds revoke associated licenses; partial refunds do not. Review charge disputes, delayed payment methods, tax calculation, reconciliation, invoice delivery and refund policy before production. Never use a success URL as proof of payment.
